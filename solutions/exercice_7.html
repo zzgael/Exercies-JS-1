@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_7</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="shoeSize">Pointure : </label><input type="text" id="shoeSize" name="shoeSize"/><br/>
+            <label for="yearOfBirth">Année de naissance : </label><input type="text" id="yearOfBirth" name="yearOfBirth"/><br/>
+            <button id="submit" name="submit">Valider</button>
+        </form>
+
+        <script>
+            function calculerResultat(event) {
+                event.preventDefault()
+
+                const pointure = document.getElementById("shoeSize").value
+                const annee = document.getElementById('yearOfBirth').value
+
+                let resultat = pointure * 2
+                resultat += 5                   // même chose que resultat = resultat + 5
+                resultat *= 50                  // même chose que resultat = resultat * 50
+                resultat -= annee               // même chose que resultat = resultat - annee
+                resultat += 1766                 // même chose que resultat = resultat + 1766
+
+                alert(resultat)
+            }
+
+            document.querySelector('form').addEventListener('submit', calculerResultat)
+        </script>
+    </body>
+</html>

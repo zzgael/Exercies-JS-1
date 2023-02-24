@@ -11,5 +11,18 @@
             <label for="city">Ville : </label><input type="text" name="city" id="city"/>
             <button  name="submit" id="submit">Valider</button>
         </form>
+
+        <script>
+            document.querySelector("form").addEventListener("submit", function (event) {
+                event.preventDefault()
+                console.log("Envoi du formulaire")
+
+                const nom = document.getElementById("lastname").value
+                const prenom = document.getElementById("firstname").value
+                const ville = document.getElementById("city").value
+
+                alert("Bonjour " + nom + " " + prenom + " de " + ville)
+            })
+        </script>
     </body>
 </html>

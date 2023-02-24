@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_8</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+            <button id="submit" name="submit">Valider</button>
+        </form>
+
+        <script>
+            function direMajeurOuMineur(event) {
+                event.preventDefault()
+
+                const age = document.getElementById("age").value
+
+                if(age > 18) {
+                    alert("Vous êtes majeur")
+                } else {
+                    alert("Vous êtes mineur")
+                }
+            }
+
+            document.querySelector('form').addEventListener("submit", direMajeurOuMineur)
+        </script>
+    </body>
+</html>
